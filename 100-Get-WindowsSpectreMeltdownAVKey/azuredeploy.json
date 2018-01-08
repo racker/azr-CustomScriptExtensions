@@ -12,8 +12,15 @@
       "type": "string"
     },
     "arguments": {
-      "type": "securestring",
-      "defaultValue": " "
+      "type": "string",
+      "defaultValue": "$False",
+      "allowedValues":[
+        "$False",
+        "$True"  
+      ],
+      "metadata": {
+        "description": "Run in Fix Mode?"
+      }
     }
   },
   "variables": {
