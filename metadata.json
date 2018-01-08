@@ -1,0 +1,7 @@
+{
+  "itemDisplayName": "Custom Script Extension - Get-WindowsSpectreMeltdownAVKey",
+  "description": "This template installs the a CustomScript extension on a Windows VM that gathers specific registry key information needed to determine patch viability for SSpectre/Meltdown",
+  "summary": "This template installs the CustomScript extension on a Windows VM in order to determine the registry key value of HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\QualityCompat ",
+  "githubUsername": "magno101",
+  "dateUpdated": "2018-01-08"
+}
