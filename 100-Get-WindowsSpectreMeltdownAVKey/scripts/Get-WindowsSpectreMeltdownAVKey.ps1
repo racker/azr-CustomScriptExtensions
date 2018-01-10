@@ -3,7 +3,7 @@
 param(
   [ Parameter( 
     Position = 0, 
-    Mandatory = $True, 
+    Mandatory = $false, 
     ValueFromPipeline = $False)
   ]
   [switch]$Fix=$False
