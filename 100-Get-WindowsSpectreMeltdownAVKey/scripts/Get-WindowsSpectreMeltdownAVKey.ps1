@@ -6,7 +6,7 @@ param(
     Mandatory = $True, 
     ValueFromPipeline = $False)
   ]
-  [switch]$Fix
+  [switch]$Fix=$False
 )
 $ClientSettings = @{
   ComputerName         = $ENV:ComputerName
