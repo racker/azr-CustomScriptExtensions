@@ -1,0 +1,14 @@
+{  
+  "location": "",
+  "properties": {
+    "publisher": "Microsoft.Compute",
+    "type": "CustomScriptExtension",
+    "typeHandlerVersion": "1.0",
+    "autoUpgradeMinorVersion": true,
+    "forceUpdateTag": "RerunExtension",
+    "settings": {
+       "fileUris": [ "https://raw.githubusercontent.com/racker/azr-CustomScriptExtensions/master/100-Get-WindowsSpectreMeltdownAVKey/scripts/Get-WindowsSpectreMeltdownAVKey.ps1"],
+       "commandToExecute": "& Get-WindowsSpectreMeltdownAVKey.ps1"
+    }
+  }
+}
