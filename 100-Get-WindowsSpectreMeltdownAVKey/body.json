@@ -8,7 +8,7 @@
     "forceUpdateTag": "RerunExtension",
     "settings": {
        "fileUris": [ "https://raw.githubusercontent.com/racker/azr-CustomScriptExtensions/master/100-Get-WindowsSpectreMeltdownAVKey/scripts/Get-WindowsSpectreMeltdownAVKey.ps1"],
-       "commandToExecute": "powershell.exe -File '.\\Get-WindowsSpectreMeltdownAVKey.ps1'"
+       "commandToExecute": "powershell.exe -File './Get-WindowsSpectreMeltdownAVKey.ps1'"
     }
   }
 }
