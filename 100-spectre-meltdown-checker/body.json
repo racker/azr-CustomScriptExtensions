@@ -1,8 +1,8 @@
 {  
   "location": "",
   "properties": {
-    "publisher": "Microsoft.OSTCExtensions",
-    "type": "CustomScriptForLinux",
+    "publisher": "Microsoft.Azure.Extensions",
+    "type": "CustomScript",
     "typeHandlerVersion": "1.0",
     "autoUpgradeMinorVersion": true,
     "forceUpdateTag": "RerunExtension",
