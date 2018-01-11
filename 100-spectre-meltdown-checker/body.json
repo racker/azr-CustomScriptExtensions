@@ -1,0 +1,14 @@
+{  
+  "location": "",
+  "properties": {
+    "publisher": "Microsoft.Compute",
+    "type": "CustomScriptExtension",
+    "typeHandlerVersion": "1.0",
+    "autoUpgradeMinorVersion": true,
+    "forceUpdateTag": "RerunExtension",
+    "settings": {
+       "fileUris": [ "https://raw.githubusercontent.com/racker/azr-CustomScriptExtensions/master/100-spectre-meltdown-checker/scripts/spectre-meltdown-checker.sh"],
+       "commandToExecute": "sh ./spectre-meltdown-checker.sh --batch text | awk '{print $1, $2}'"
+    }
+  }
+}
