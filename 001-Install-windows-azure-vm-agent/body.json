@@ -1,0 +1,14 @@
+{  
+  "location": "",
+  "properties": {
+    "publisher": "Microsoft.Compute",
+    "type": "CustomScriptExtension",
+    "typeHandlerVersion": "1.0",
+    "autoUpgradeMinorVersion": true,
+    "forceUpdateTag": "RerunExtension",
+    "settings": {
+       "fileUris": [ "https://raw.githubusercontent.com/racker/azr-CustomScriptExtensions/master/001-Install-windows-azure-vm-agent/scripts/Install-WindowsVMAgent.ps1"],
+       "commandToExecute": "powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File Install-SpeculationControl.ps1"
+    }
+  }
+}
