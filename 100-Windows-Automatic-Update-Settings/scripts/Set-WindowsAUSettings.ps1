@@ -5,14 +5,14 @@ param(
     ValueFromPipeline = $False)
   ]
   [ ValidateSet("Enabled", "Disabled") ]
-  [string]$AutoUpdate,
+  [string]$AutoUpdate="Enabled",
   [ Parameter( 
     Position = 1, 
     Mandatory = $False, 
     ValueFromPipeline = $False)
   ]
   [ ValidateSet("Notify before Download", "Download and Notify", "Download and Install", "User Configured") ]
-  [string]$AUOptions,
+  [string]$AUOptions="Download and Notify",
   [ Parameter( 
     Position = 2, 
     Mandatory = $False,
