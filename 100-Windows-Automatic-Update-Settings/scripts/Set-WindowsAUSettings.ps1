@@ -1,7 +1,7 @@
 param(
   [ Parameter( 
     Position = 0, 
-    Mandatory = $True, 
+    Mandatory = $False, 
     ValueFromPipeline = $False)
   ]
   [ ValidateSet("Enabled", "Disabled") ]
