@@ -1,0 +1,14 @@
+{  
+  "location": "",
+  "properties": {
+    "publisher": "Microsoft.Compute",
+    "type": "CustomScriptExtension",
+    "typeHandlerVersion": "1.0",
+    "autoUpgradeMinorVersion": true,
+    "forceUpdateTag": "RerunExtension",
+    "settings": {
+       "fileUris": [ "https://raw.githubusercontent.com/racker/azr-CustomScriptExtensions/master/828148-Install-TaniumAgent_Windows/scripts/Install-TaniumAgent_Windows.ps1"],
+       "commandToExecute": "powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File Install-TaniumAgent_Windows.ps1"
+    }
+  }
+}
