@@ -8,14 +8,15 @@ Try {
   $Svc = Get-Service -Name $ServiceName.split(',').trim() -ErrorAction Stop
   #Format OMS Report Object
   $Message = @(ForEach ($Service in $Svc) {
-    New-Object PSObject ([ordered]@{
+    $Report = New-Object PSObject -Property ([ordered]@{
       Computer=$env:COMPUTERNAME
-      SvcDisplay=$Svc.DisplayName
-      SvcName=$Svc.Name
-      SvcState=($Svc.Status).tostring()
-      SvcStartType = ($Svc.StartType).ToString()
+      SvcDisplay=$Service.DisplayName
+      SvcName=$Service.Name
+      SvcState=($Service.Status)
+      SvcStartType = ($Service.StartType)
       ResourceId = $vmid
     })
+    $Report
   })
   $MessageJSONString = [string]($Message | ConvertTo-JSON) 
   Write-Output -InputObject $MessageJSONString
