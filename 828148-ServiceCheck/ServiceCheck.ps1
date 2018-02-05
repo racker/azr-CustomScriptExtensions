@@ -20,7 +20,7 @@ Try {
   })
   $MessageJSONString = [string]($Message | ConvertTo-JSON) 
   Write-Output -InputObject $MessageJSONString
-  Remove-Variable -Name MessageJSONString,vmid,svc,Message,ServiceName -Force -ErrorAction SilentlyContinue | Out-Null
+  Remove-Variable -Name MessageJSONString,vmid,svc,Message,ServiceName,Report -Force -ErrorAction SilentlyContinue | Out-Null
 }
 Catch [Microsoft.PowerShell.Commands.ServiceCommandException] {
   Write-Error -Exception $_.Exception -Message "$($_.TargetObject) Service Not Found"
