@@ -12,8 +12,8 @@ Try {
       Computer=$env:COMPUTERNAME
       SvcDisplay=$Service.DisplayName
       SvcName=$Service.Name
-      SvcState=($Service.Status)
-      SvcStartType = ($Service.StartType)
+      SvcState=($Service.Status).tostring()
+      SvcStartType = ($Service.StartType).tostring()
       ResourceId = $vmid
     })
     $Report
