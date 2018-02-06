@@ -46,7 +46,10 @@ if ($ProcessName) {
           Computer   = $env:COMPUTERNAME
           ProcName   = $Pro.Name
           ProcPath   = $Pro.Path
-          ProcState  = $Pro.Responding
+          ProcState  = Switch ( $Pro.Responding ){
+            $true  { "Running"; break }
+            $false { "Halted" ; break }
+          }
           ResourceId = $vmid
         })
       }
