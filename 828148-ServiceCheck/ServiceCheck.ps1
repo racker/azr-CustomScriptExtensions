@@ -25,7 +25,7 @@ if ($ServiceName) {
       #Format OMS Report Object
       $Message += New-Object PSObject ([ordered]@{
           Computer     = $env:COMPUTERNAME
-          SvcDisplay   = "Service Not Found"
+          SvcDisplay   = $Service
           SvcName      = $Service 
           SvcState     = "Service Not Found"
           SvcStartType = "Service Not Found"
