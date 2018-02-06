@@ -44,9 +44,9 @@ if ($ProcessName) {
       $Message += ForEach ($Pro in $Proc) {
         New-Object PSObject -Property ([ordered]@{
           Computer   = $env:COMPUTERNAME
-          ProcName   = $Proc.Name
-          ProcPath   = $Proc.Path
-          ProcState  = $Proc.Responding
+          ProcName   = $Pro.Name
+          ProcPath   = $Pro.Path
+          ProcState  = $Pro.Responding
           ResourceId = $vmid
         })
       }
