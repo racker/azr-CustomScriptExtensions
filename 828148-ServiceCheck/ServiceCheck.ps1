@@ -41,23 +41,27 @@ if ($ProcessName) {
     Try {
       $Proc = Get-Process -Name $Process -ErrorAction Stop
       #Format OMS Report Object
-      $Message += New-Object PSObject -Property ([ordered]@{
+      $Message = ForEach ($Pro in $Proc) {
+        New-Object PSObject -Property ([ordered]@{
           Computer   = $env:COMPUTERNAME
           ProcName   = $Proc.Name
           ProcPath   = $Proc.Path
           ProcState  = $Proc.Responding
           ResourceId = $vmid
         })
+      }
     }
     Catch [Microsoft.PowerShell.Commands.ProcessCommandException] {
       Write-Error -Exception $_.Exception -Message "$($_.TargetObject) Process Not Found"
-      $Message += New-Object PSObject ([ordered]@{
+      $Message = ForEach ($Pro in $Proc) {
+        New-Object PSObject ([ordered]@{
           Computer   = $env:COMPUTERNAME
           ProcName   = $Process
           ProcPath   = "Process Not Found"
           ProcState  = "Stopped"
           ResourceId = $vmid
         })
+      }
       Continue
     }
   }
