@@ -45,7 +45,6 @@ if ($ProcessName) {
         New-Object PSObject -Property ([ordered]@{
           Computer   = $env:COMPUTERNAME
           ProcName   = $Pro.Name
-          ProcPath   = $Pro.Path
           ProcState  = Switch ( $Pro.Responding ){
             $true  { "Running"; break }
             $false { "Halted" ; break }
@@ -60,8 +59,7 @@ if ($ProcessName) {
         New-Object PSObject ([ordered]@{
           Computer   = $env:COMPUTERNAME
           ProcName   = $Process
-          ProcPath   = "Process Not Found"
-          ProcState  = "Stopped"
+          ProcState  = "Not Found"
           ResourceId = $vmid
         })
       }
