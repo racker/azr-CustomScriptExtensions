@@ -1,6 +1,6 @@
 #!/bin/bash
 ##################################################################################
-# Name: installtanium.sh
+# Name: Install-TaniumAgent_Linux.sh
 # Description: Custom Script Extension used to install appropriate package of tanium client
 # Authors: Cameron Collins
 # Copyright: Rackspace, Inc. 2018.
@@ -9,7 +9,7 @@
 ########################### GLOBAL VARIABLES #####################################
 
 SERVERNAME=`hostname`
-LOGFILE=/root/.rackspace/taniuminstall.log               ## Not In Use
+LOGFILE=/root/.rackspace/taniuminstall.log              ## Not Implemented
 ROOTURL="https://containerd.blob.core.windows.net/tanium/"
 
 ## Oracle Linux
